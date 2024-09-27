@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="administracion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Panel de Administración</h2>
+        <ul>
+          <li><a href="#"><i class="fas fa-home"> </i> Inicio</a></li>
+          <li><a href="#"><i class="fas fa-box"></i> Órdenes</a></li>
+          <li><a href="#"><i class="fas fa-edit"></i> Edición de la Página</a></li>
+          <li><a href="#"><i class="fas fa-credit-card"></i> Pagos</a></li>
+          <li><a href="#"><i class="fas fa-comments"></i> Atención al Cliente</a></li>
+
+          <li>
+            <a href="#" class="products"><i class="fas fa-boxes"></i> Productos <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown">
+              <a href="#"><i class="fas fa-plus"></i> Agregar</a>
+              <a href="#"><i class="fas fa-edit"></i> Editar</a>
+            </div>
+          </li>
+          <li><a href="#"><i class="fas fa-history"></i> Historial de Ventas</a></li>
+          <li><a href="#"><i class="fas fa-store"></i> Mi Tienda</a></li>
+          <li><a href="#"><i class="fas fa-tools"></i> Soporte Técnico</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.querySelector('.products').addEventListener('click', function(e) {
+          e.preventDefault(); // Evita que el enlace redirija la página
+          this.classList.toggle('active'); // Activa o desactiva la clase 'active'
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Rodrigo. Todos los derechos reservados.</p>
+    </footer>
+    
+</body>
+</html>
