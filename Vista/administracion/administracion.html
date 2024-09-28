@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="administracion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Órdenes</title>
+</head>
+<body>
+
+    <!-- Aquí se cargará el dashboard -->
+    <div id="dashboard-container"></div>
+
+    <!-- Contenido principal de la página -->
+    <div class="main-content">
+        <h1>Órdenes</h1>
+        <p>Aquí puedes gestionar todas las órdenes de tu tienda.</p>
+        
+        <!-- Tabla de Órdenes -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID de Orden</th>
+                    <th>Nombre del Cliente</th>
+                    <th>Fecha de Pedido</th>
+                    <th>Transacción</th>
+                    <th>Categoría</th>
+                    <th>Color</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Juan Pérez</td>
+                    <td>2024-09-28</td>
+                    <td>$50.00</td>
+                    <td>Botellas</td>
+                    <td>Rojo</td>
+                    <td>Completado</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Ana García</td>
+                    <td>2024-09-27</td>
+                    <td>$30.00</td>
+                    <td>Pelotas</td>
+                    <td>Azul</td>
+                    <td>Pendiente</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Pedro López</td>
+                    <td>2024-09-26</td>
+                    <td>$20.00</td>
+                    <td>Ropa</td>
+                    <td>Verde</td>
+                    <td>Cancelado</td>
+                </tr>
+                <!-- Más filas según sea necesario -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Aquí se cargará el footer -->
+    <div id="footer-container"></div>
+
+    <!-- JavaScript para cargar el dashboard y el footer -->
+    <script>
+        // Cargar el contenido de dashboard.html dentro de 'dashboard-container'
+        fetch('dashboard.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('dashboard-container').innerHTML = data;
+            });
+
+        // Cargar el contenido de footer.html dentro de 'footer-container'
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>
